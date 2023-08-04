@@ -78,6 +78,7 @@ namespace PadariaCarmel
             this.txtUsuário.Name = "txtUsuário";
             this.txtUsuário.Size = new System.Drawing.Size(163, 26);
             this.txtUsuário.TabIndex = 0;
+            this.txtUsuário.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuário_KeyDown);
             // 
             // txtSenha
             // 
@@ -89,6 +90,7 @@ namespace PadariaCarmel
             this.txtSenha.Size = new System.Drawing.Size(163, 25);
             this.txtSenha.TabIndex = 1;
             this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // buttEntra
             // 

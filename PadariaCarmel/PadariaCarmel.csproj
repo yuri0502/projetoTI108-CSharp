@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCalculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalculas.Designer.cs">
+      <DependentUpon>frmCalculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmComponentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +104,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCalculas.resx">
+      <DependentUpon>frmCalculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmComponentes.resx">
       <DependentUpon>frmComponentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

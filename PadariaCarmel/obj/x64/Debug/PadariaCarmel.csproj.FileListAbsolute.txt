@@ -8,3 +8,5 @@ C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\Padar
 C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.CoreCompileInputs.cache
 C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.exe
 C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.pdb
+C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.csproj.AssemblyReference.cache
+C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\x64\Debug\PadariaCarmel.frmCalculas.resources

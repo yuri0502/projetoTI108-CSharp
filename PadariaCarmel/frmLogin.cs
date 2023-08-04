@@ -34,11 +34,51 @@ namespace PadariaCarmel
 
         private void buttEntra_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bem vindo ao sistema",
-                "Mensagem do sistema",
-                MessageBoxButtons.YesNoCancel,
-                MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button3);
+
+            if (txtUsuário.Text.Equals("senac") && txtSenha.Text.Equals("senac"))
+            {
+                frmMenuPrincipal abrir = new frmMenuPrincipal();
+                abrir.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválido",
+                    "Mensagem do sistema",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+                limparTela();
+            }
+        }
+
+
+        public void limparTela()
+        {
+            txtUsuário.Clear();
+            txtSenha.Clear();
+            txtUsuário.Focus();
+        }
+
+        private void txtUsuário_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+
+            {
+                txtSenha.Focus();
+     
+            }
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                buttEntra.Focus();
+            }
         }
     }
+
+ 
 }
