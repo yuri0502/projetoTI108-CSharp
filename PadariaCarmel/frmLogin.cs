@@ -7,11 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
 
 namespace PadariaCarmel
 {
     public partial class frmLogin : Form
     {
+        //Criando variáveis para controle do menu
+        const int MF_BYCOMMAND = 0X400;
+        [DllImport("user32")]
+        static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
+        [DllImport("user32")]
+        static extern IntPtr GetSystemMenu(IntPtr hWnd, bool bRevert);
+        [DllImport("user32")]
+        static extern int GetMenuItemCount(IntPtr hWnd);
         public frmLogin()
         {
             InitializeComponent();
@@ -19,7 +29,9 @@ namespace PadariaCarmel
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            IntPtr hMenu = GetSystemMenu(this.Handle, false);
+            int MenuCount = GetMenuItemCount(hMenu) - 1;
+            RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -29,7 +41,8 @@ namespace PadariaCarmel
 
         private void buttSair_Click(object sender, EventArgs e)
         {
-            Close();
+            //Close();
+            Application.Exit();
         }
 
         private void buttEntra_Click(object sender, EventArgs e)

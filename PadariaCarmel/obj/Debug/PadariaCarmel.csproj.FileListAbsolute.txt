@@ -11,3 +11,5 @@ C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\Padar
 C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmLogin.resources
 C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmCalculas.resources
 C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmSplash.resources
+C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmMenuPrincipal.resources
+C:\Users\yuri.osouza\Documents\Visual Studio 2019\ProjetoTI108\EmpreasaABC\PadariaCarmel\obj\Debug\PadariaCarmel.frmFuncionarios.resources
