@@ -126,6 +126,7 @@ namespace PadariaCarmel
             this.btnPesquisar.Text = "&Pesquisar";
             this.btnPesquisar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnExcluir
             // 
@@ -198,6 +199,7 @@ namespace PadariaCarmel
             this.makCEP.Name = "makCEP";
             this.makCEP.Size = new System.Drawing.Size(84, 20);
             this.makCEP.TabIndex = 11;
+            this.makCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.makCEP_KeyDown);
             // 
             // lblCEP
             // 
@@ -227,7 +229,7 @@ namespace PadariaCarmel
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(198, 361);
+            this.txtCidade.Location = new System.Drawing.Point(216, 360);
             this.txtCidade.MaxLength = 100;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(125, 20);
@@ -236,7 +238,7 @@ namespace PadariaCarmel
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(211, 336);
+            this.lblCidade.Location = new System.Drawing.Point(227, 336);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(46, 13);
             this.lblCidade.TabIndex = 105;
@@ -247,7 +249,7 @@ namespace PadariaCarmel
             this.txtBarrio.Location = new System.Drawing.Point(28, 361);
             this.txtBarrio.MaxLength = 100;
             this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(125, 20);
+            this.txtBarrio.Size = new System.Drawing.Size(151, 20);
             this.txtBarrio.TabIndex = 8;
             // 
             // lblBarrio
