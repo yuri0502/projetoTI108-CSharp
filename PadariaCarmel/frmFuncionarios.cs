@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace PadariaCarmel
 {
@@ -54,7 +55,7 @@ namespace PadariaCarmel
             txtEndereço.Enabled = false;
             txtCidade.Enabled = false;
             txtNumero.Enabled = false;
-            txtBarrio.Enabled = false;
+            txtBairro.Enabled = false;
             txtEmail.Enabled = false;
 
             makCEP.Enabled = false;
@@ -74,7 +75,7 @@ namespace PadariaCarmel
             txtEndereço.Enabled = true;
             txtCidade.Enabled = true;
             txtNumero.Enabled = true;
-            txtBarrio.Enabled = true;
+            txtBairro.Enabled = true;
             txtEmail.Enabled = true;
 
             makCEP.Enabled = true;
@@ -96,7 +97,7 @@ namespace PadariaCarmel
             txtEndereço.Clear();
             txtCidade.Clear();
             txtNumero.Clear();
-            txtBarrio.Clear();
+            txtBairro.Clear();
             txtEmail.Clear();
 
             makCEP.Clear();
@@ -107,9 +108,16 @@ namespace PadariaCarmel
 
             txtNome.Focus();
         }
+        //cadastra funcionarios 
+
+
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+
+
+
+            CadastraFuncionario();
             MessageBox.Show("Usuários cadastrado com sucesso!", " Menssagem do sistema",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information,
@@ -118,6 +126,30 @@ namespace PadariaCarmel
             desabilitarCampos();
             btnNovo.Enabled = true;
             limparCampos();
+
+        }
+
+        public void CadastraFuncionario()
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "insert into tbFuncionarios(nome,email,telCel,cpf,endereco,numero,bairro,cidade,estado,cep)values(@nome,@email,@telCel,@cpf,@endereco,@numero,@bairro,@cidade,@estado,@cep);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome",MySqlDbType.VarChar,100).Value = txtNome.Text;
+            comm.Parameters.Add("@email",MySqlDbType.VarChar,100).Value = txtEmail.Text;
+            comm.Parameters.Add("@telCel",MySqlDbType.VarChar,15).Value = makTelefone.Text;
+            comm.Parameters.Add("@cpf",MySqlDbType.VarChar,14).Value = makCPF.Text;
+            comm.Parameters.Add("@endereco",MySqlDbType.VarChar,100).Value = txtEndereço.Text ;
+            comm.Parameters.Add("@numero",MySqlDbType.VarChar,10).Value = txtNumero.Text;
+            comm.Parameters.Add("@bairro",MySqlDbType.VarChar,100).Value = txtBairro.Text;
+            comm.Parameters.Add("@cidade",MySqlDbType.VarChar,100).Value = txtCidade.Text;
+            comm.Parameters.Add("@estado",MySqlDbType.VarChar,2).Value = comEstado.Text;
+            comm.Parameters.Add("@cep",MySqlDbType.VarChar,9).Value = makCEP.Text;
+
+            comm.Connection = Conectar.obterConexao();
+            int res = comm.ExecuteNonQuery();
+            Conectar.fecharConexao();
 
         }
 
@@ -148,7 +180,7 @@ namespace PadariaCarmel
             {
                 WScorreio.enderecoERP endereco = ws.consultaCEP(numCEP);
                 txtEndereço.Text = endereco.end;
-                txtBarrio.Text = endereco.bairro;
+                txtBairro.Text = endereco.bairro;
                 txtCidade.Text = endereco.cidade;
                 comEstado.Text = endereco.uf;
 
@@ -182,6 +214,9 @@ namespace PadariaCarmel
             abri.Show();
             this.Hide();
         }
+
+     
+          
     }
 
 }

@@ -45,8 +45,8 @@ namespace PadariaCarmel
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
-            this.txtBarrio = new System.Windows.Forms.TextBox();
-            this.lblBarrio = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.txtEndereço = new System.Windows.Forms.TextBox();
@@ -170,8 +170,8 @@ namespace PadariaCarmel
             this.pnlFuncionario.Controls.Add(this.lblEstado);
             this.pnlFuncionario.Controls.Add(this.txtCidade);
             this.pnlFuncionario.Controls.Add(this.lblCidade);
-            this.pnlFuncionario.Controls.Add(this.txtBarrio);
-            this.pnlFuncionario.Controls.Add(this.lblBarrio);
+            this.pnlFuncionario.Controls.Add(this.txtBairro);
+            this.pnlFuncionario.Controls.Add(this.lblBairro);
             this.pnlFuncionario.Controls.Add(this.txtNumero);
             this.pnlFuncionario.Controls.Add(this.lblNumero);
             this.pnlFuncionario.Controls.Add(this.txtEndereço);
@@ -244,22 +244,22 @@ namespace PadariaCarmel
             this.lblCidade.TabIndex = 105;
             this.lblCidade.Text = "Cidade";
             // 
-            // txtBarrio
+            // txtBairro
             // 
-            this.txtBarrio.Location = new System.Drawing.Point(28, 361);
-            this.txtBarrio.MaxLength = 100;
-            this.txtBarrio.Name = "txtBarrio";
-            this.txtBarrio.Size = new System.Drawing.Size(151, 20);
-            this.txtBarrio.TabIndex = 8;
+            this.txtBairro.Location = new System.Drawing.Point(28, 361);
+            this.txtBairro.MaxLength = 100;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(151, 20);
+            this.txtBairro.TabIndex = 8;
             // 
-            // lblBarrio
+            // lblBairro
             // 
-            this.lblBarrio.AutoSize = true;
-            this.lblBarrio.Location = new System.Drawing.Point(25, 336);
-            this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(40, 13);
-            this.lblBarrio.TabIndex = 103;
-            this.lblBarrio.Text = "Barrio";
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Location = new System.Drawing.Point(25, 336);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(40, 13);
+            this.lblBairro.TabIndex = 103;
+            this.lblBairro.Text = "Bairro";
             // 
             // txtNumero
             // 
@@ -431,7 +431,7 @@ namespace PadariaCarmel
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblCidade;
-        private System.Windows.Forms.TextBox txtBarrio;
-        private System.Windows.Forms.Label lblBarrio;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label lblBairro;
     }
 }
